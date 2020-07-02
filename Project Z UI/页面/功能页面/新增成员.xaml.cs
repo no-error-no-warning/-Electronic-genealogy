@@ -13,6 +13,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Project_Z_UI.页面.功能页面
 {
@@ -45,7 +47,7 @@ namespace Project_Z_UI.页面.功能页面
             string gender = genderTextbox.Text;
             
 
-            string connStr = "Data Source=(local);Initial Catalog=family;User ID=sa;Password=qq123456";
+            string connStr = "Data Source=(local);Initial Catalog=电子族谱;User ID=sa;Password=123123";
             string sql = string.Format("insert into t_user (编号,姓名,年龄,密码,代数,父亲编号,是否为管理员,性别,出生日期) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')", id, name, age, password, dai, fid, admin,gender,birth);
             //MessageBox.Show(sql);
             //string sql = "insert into t_user (id,name,age,password,birth,dai,fid,admin) values ('2','张三','23','831143','2018-11-3','2','1','0')";
