@@ -321,8 +321,26 @@
             </UniformGrid>
         </Grid>
 
-        <!-- 主区内容-->
-        <Grid Grid.Row=" 1 " Grid.Column=" 1"  />
+       <!-- 主区内容-->
+        <Grid Grid.Row=" 1 " Grid.Column=" 1"  >
+            <Label Content="姓名：" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Width="63"/>
+            <Label Content="编号：" HorizontalAlignment="Left" Margin="250,11,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+            <TextBox x:Name="textbox1" HorizontalAlignment="Left" Height="33" Margin="73,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87" FontSize="20" FontWeight="Bold"/>
+            <Button Content="查询" HorizontalAlignment="Left" Margin="170,11,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" FontSize="20" Click="searchName"/>
+            <TextBox x:Name="textbox2" HorizontalAlignment="Left" Height="33" Margin="307,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" FontSize="20" FontWeight="Bold"/>
+            <Button Content="查询" HorizontalAlignment="Left" Margin="390,9,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" FontSize="20" Click="searchID"/>
+            <Button Content="查询所有成员" HorizontalAlignment="Left" Margin="470,9,0,0" VerticalAlignment="Top" Width="161" FontWeight="Bold" FontSize="20" Click="searchAll"/>
+            <DataGrid x:Name="DataGrid" HorizontalAlignment="Left" Height="276" Margin="10,67,0,0" VerticalAlignment="Top" Width="779" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" IsSynchronizedWithCurrentItem="True" HeadersVisibility="All" BeginningEdit="DataGrid_BeginningEdit" CellEditEnding="DataGrid_CellEditEnding">
+                <DataGrid.Columns>
+                    <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" DisplayIndex="0" Header="操作"/>
+                </DataGrid.Columns>
+                <DataGrid.BindingGroup>
+                    <BindingGroup/>
+                </DataGrid.BindingGroup>
+            </DataGrid>
+            <Button Content="修改" HorizontalAlignment="Left" Margin="636,9,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" FontSize="20" Click="Button_Click_3"/>
+            <Button Content="删除" HorizontalAlignment="Left" Margin="714,10,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" FontSize="20" Click="Button_Click_4"/>
+        </Grid>
 
          </Grid>
 </Window>
